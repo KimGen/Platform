@@ -2,7 +2,7 @@
 
 # Use single quotes instead of double quotes to make it work with special-character passwords
 PASSWORD='12345678'
-PROJECTFOLDER='myproject'
+PROJECTFOLDER='platform'
 
 # Create project folder, written in 3 single mkdir-statements to make sure this runs everywhere without problems
 sudo mkdir "/var/www"
@@ -60,7 +60,7 @@ sudo apt-get -y install php5-gd
 sudo apt-get -y install git
 
 # git clone HUGE
-sudo git clone https://github.com/panique/huge "/var/www/html/${PROJECTFOLDER}"
+sudo git clone https://github.com/KimGen/platform "/var/www/html/${PROJECTFOLDER}"
 
 # install Composer
 curl -s https://getcomposer.org/installer | php
