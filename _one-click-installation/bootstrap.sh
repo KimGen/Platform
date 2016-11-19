@@ -29,7 +29,7 @@ echo "${VHOST}" > /etc/apache2/sites-available/000-default.conf
 a2enmod rewrite
 
 # restart apache
-apache2 restart
+apache2 -k restart
 
 # git clone HUGE
 git clone https://github.com/KimGen/platform "/var/www/html/${PROJECTFOLDER}"
