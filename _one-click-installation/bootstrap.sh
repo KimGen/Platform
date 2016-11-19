@@ -11,8 +11,6 @@ mkdir "/var/www/html/${PROJECTFOLDER}"
 
 debconf-set-selections <<< "mysql-server mysql-server/root_password password $PASSWORD"
 debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $PASSWORD"
-apt-get -y install mysql-server
-apt-get install php5-mysql
 
 # setup hosts file
 VHOST=$(cat <<EOF
@@ -32,9 +30,6 @@ a2enmod rewrite
 
 # restart apache
 apache2 restart
-
-# install PHP GD, the graphic lib (we create captchas and avatars)
-apt-get -y install php5-gd
 
 # git clone HUGE
 git clone https://github.com/KimGen/platform "/var/www/html/${PROJECTFOLDER}"
