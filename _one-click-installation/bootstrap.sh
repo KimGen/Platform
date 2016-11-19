@@ -9,9 +9,6 @@ mkdir "/var/www"
 mkdir "/var/www/html"
 mkdir "/var/www/html/${PROJECTFOLDER}"
 
-apt-get update
-apt-get -y upgrade
-
 apt-get install -y apache2
 apt-get install -y php5
 
@@ -47,8 +44,7 @@ a2enmod rewrite
 apache2 restart
 
 # install curl (needed to use git afaik)
-apt-get -y install curl
-apt-get -y install php5-curl
+apt-get -y install curl php5-curl
 
 # install openssl (needed to clone from GitHub, as github is https only)
 apt-get -y install openssl
